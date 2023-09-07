@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+button {
+  background-color:black;
+  color:white;
+  width: 170px;
+  hight: 50px;
+  border-radius: 10px;
+  border: 5px lightgray;
+  
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disha Timbadiya</title>
+
+  <!--top button-->
+  <style>
+  #topBtn {
+  /* display:; /* Hide the button by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Place the button 20px from the bottom */
+  right: 20px; /* Place the button 20px from the right */
+  z-index: 99; /* Make sure the button is on top of other elements */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set background color to transparent */
+  cursor: pointer; /* Change cursor to a hand pointer */
+}
+
+#topBtn img {
+  height: 40px;
+  weight: 40px;
+  border-radius: 50%; 
+}
+</style>
+
+
+  
+<!--center body-->
+  <style>
+* {
+  box-sizing: border-box;
+}
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+
+
+
+  
+<!--FOOTER  -->
+<style>
+footer {
+  text-align: center;
+  height:70px;
+  padding: 10px;
+  background-color:black;
+  color: white;
+}
+  </style>
+
+  
+ 
+
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+
+      /*background: linear-gradient(#03a9f4, #03a9f4 45%, #fff 45%, #fff 100%);*/
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-bx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      transform: translateY(30px) scale(0.5);
+      transform-origin: top;
+    }
+
+    .img-bx img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 30px;
+    }
+
+    .content .detail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .content .detail h2 {
+      color: #444;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+
+    .content .detail h2 span {
+      font-size: 0.7em;
+      color: #03a9f4;
+      font-weight: bold;
+    }
+
+    .sci {
+      background:white;
+      position: relative;
+      display: flex;
+      margin-top: 5px;
+    }
+
+    .sci li {
+      background:white;
+      list-style: none;
+      margin: 4px;
+    }
+
+    .sci li a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: transparent;
+      font-size: 1.5em;
+      color: #444;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: 0.5s;
+    }
+
+    .sci li a:hover {
+      background: lightpink;
+      color: #fff;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+
+
+
+
+  <style>
+    ._darkModeContainer_4lpgk_2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .MuiSvgIcon-root {
+      fill: currentColor;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      font-size: 1.5rem;
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      flex-shrink: 0;
+      user-select: none;
+    }
+  </style>
+
+
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+
+  <style>
+    button {
+      background-color: black;
+      color: white;
+      width: 170px;
+      hight: 40px;
+      border-radius: 10px;
+      border: 5px lightgray;
+
+    }
+  </style>
+
+
+  <style>
+    ._darkModeContainer_4lpgk_2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .MuiSvgIcon-root {
+      fill: currentColor;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      font-size: 1.5rem;
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      flex-shrink: 0;
+      user-select: none;
+    }
+  </style>
+
+
+
+
+  <style>
+    .switch {
+      --primary-light: #8abdff;
+      --primary: #6d5dfc;
+      --primary-dark: #5b0eeb;
+      --white: #FFFFFF;
+      --greyLight-1: #E4EBF5;
+      --greyLight-2: #c8d0e7;
+      --greyDark: #9baacf;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .switch_ {
+      width: 5rem;
+      scale: 0.83;
+      /* You can change 
+  the size here !*/
+    }
+
+    .switch_ label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 3rem;
+      box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+      background: rgba(255, 255, 255, 0);
+      position: relative;
+      cursor: pointer;
+      border-radius: 1.6rem;
+    }
+
+    .switch_ label::after {
+      content: "";
+      position: absolute;
+      left: 0.4rem;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      background: var(--greyDark);
+      transition: all 0.4s ease;
+    }
+
+    .switch_ label::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .switch input:checked~label::before {
+      opacity: 1;
+    }
+
+    .switch input:checked~label::after {
+      left: 57%;
+      background: var(--greyLight-1);
+    }
+
+    .dark {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: darkgrey;
+    }
+  </style>
+  <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ach.html">Achievements</a></li>
+    <li><a href="contact_me.html">Contact</a></li>
+    <li><a href="profile.html">About</a></li>
+    <li><a href="hobbies.html">Hobbies </a></li>
+    <li><a href="startupideas.html">Startup Ideas </a></li>
+     <li><a href="projects.html">Projects </a></li>
+    <li><a href="https://puzzle.dishatimbadiya.repl.co/">Puzzle </a></li>
+     <li><a href="feedback.html">Feedback </a></li>
+    <li>
+      <div class="_title__elements_1dtux_1084">
+        <div>
+          <div class="_darkModeContainer_4lpgk_2" onclick="myFunction()" title="Switch to Dark Mode"
+            style="margin-left: 0px;">
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(clip0_429_11039)"> <circle cx="12" cy="12" r="4" stroke="" stroke-width="2.5" stroke-linejoin="round"></circle> <path d="M20 12H21" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M3 12H4" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M12 20L12 21" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M12 3L12 4" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M17.6569 17.6569L18.364 18.364" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M5.63605 5.63604L6.34315 6.34315" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M6.34314 17.6569L5.63603 18.364" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M18.364 5.63604L17.6568 6.34315" stroke="" stroke-width="2.5" stroke-linecap="round"></path> </g> <defs> <clipPath id="clip0_429_11039"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>
+
+
+ </div>
+        </div>
+      </div>
+    </li>
+
+
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark");
+      }
+    </script>
+    </li>
+  </ul>
+  </head>
+
+  <body>
+    
+    <center>
+      <br>
+<div class="row">
+  <div class="column side">
+    
+  </div>
+ <div class="column middle">
+<button class="topBtn"id="topBtn"><img src="top.jpg" alt="Back to Top"></button>
+      <h2> PROFILE </h2>
+      <br>
+
+      <div class="card">
+        <div class="img-bx">
+          <img src="profile1.jpg" alt="img" />
+        </div>
+        <div class="content">
+          <div class="detail">
+            <h2>Disha Timbadiya<br /><span>Student</span></h2>
+            <ul class="sci">
+              <li>
+                <a href="mailto:dishatimbadiya055@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Dishatimbadiya"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/disha-t-950553248/"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </centre>
+      </br>
+
+      </br>
+      <P>Hi! I'm a First year undergraduate student at the <a href="https://www.ddu.ac.in/"><b>DHARMSINH DESAI
+            UNIVERSITY</b></a> Nadiad.
+        I am pursuing BTech in Computer Engineering.
+      </P>
+      </br>
+
+
+        <h2>EDUCATION</h2>
+  
+      <br>
+      <br>
+
+      <table id="customers">
+        <tr>
+          <th>Qualification</th>
+          <th>Year of complition </th>
+          <th>Institute</th>
+        </tr>
+        <tr>
+          <td>SSC</td>
+          <td>2020</td>
+          <td>Patel sankul</td>
+        </tr>
+        <tr>
+          <td>HSC</td>
+          <td>2022</td>
+          <td>Vidhyaguru science school</td>
+        </tr>
+        <tr>
+          <td>Graduaction(pursuing)</td>
+          <td>2026</td>
+          <td>DDU</td>
+        </tr>
+      </table>
+      </br>
+      </br>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+      </style>
+      </head>
+
+      <body>
+  
+          <h2>GET DIRECTION OF MY COLLEGE</h2>
+      
+        <br>
+        <br>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.290219261327!2d72.87801001488418!3d22.680237685127544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5adf2c171355%3A0xe1e974ce083657fb!2sDHARMSINH%20DESAI%20UNIVERSITY!5e0!3m2!1sen!2sin!4v1679897948182!5m2!1sen!2sin"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <br>
+          <h2>CONTACT ME</h2>
+        <br>
+        <br>
+
+
+
+      <!-- java script for top button-->
+
+
+        
+        <script>
+        // Get the button
+var topBtn = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+topBtn.onclick = function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+</script>
+
+
+
+        
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="india">India</option>
+              <option value="china">China</option>
+              <option value="rasia">Rasia</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+
+
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+ </div>
+</div>
+<!--         <h3>Email : dishatimbadiya055@gmail.com</h3> -->
+<footer>
+  <a href="mailto:dishatimbadiya055@gmail.com" style="color:white;">Email : dishatimbadiya055@gmail.com</a>
+  <p>© 2022 All rights reserved.</p>
+</footer>
+      </body>
+</html>

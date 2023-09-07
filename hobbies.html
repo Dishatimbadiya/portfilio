@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+  <style>
+    .new {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      background-color: greenyellow;
+      color: black;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    html body {
+      background-color: black;
+      margin: 0 0 0 0;
+    }
+
+    .infocardContainer * {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      font-weight: 300;
+    }
+
+    .hobbies {
+      align-content: center;
+      font-family: 'Fira Sans Condensed', sans-serif;
+      color: white;
+    }
+
+    .hobby {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      color: white;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-style: italic;
+      font-family: "Fira Sans Condensed", sans-serif;
+    }
+
+    header {
+      height: 2em;
+      background-color: #111122;
+      margin: 0 0 0 0;
+      padding: auto;
+      font-size: 2em;
+      text-align: center;
+      line-height: 2em;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #555566;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .infocardContainer {
+      display: flex;
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+      background: rgb(0, 159, 255);
+      background: linear-gradient(121deg, rgba(255, 255, 255, 0) 13%, rgba(0, 159, 255, 1) 100%);
+      transition: all 500ms ease-in;
+      transition-delay: 1s;
+      margin: auto;
+      margin-top: 100px;
+      --margin-top: 100px;
+    }
+
+    .infocardContainer:hover {
+      width: 500px;
+      border-radius: 100px 10px 100px 100px;
+      transition: all 1s ease-out;
+    }
+
+    .infocardContainer div {
+      text-color: white;
+      flex-shrink: 1;
+      width: 100%;
+      --background-color: green;
+    }
+
+    .infocardContainer div * {
+      display: flex;
+      --flex: inherit;
+      overflow: hidden;
+      text-overflow: hidden;
+      --background-color: yellow;
+      color: white;
+      white-space: nowrap;
+      width: 0;
+      height: auto;
+      transition: all 450ms ease-in;
+      transition-delay: 1s;
+    }
+
+    .infocardContainer:hover div * {
+      --background-color: purple;
+      display: flex;
+      visibility: visible;
+      transition: all 1s ease-out;
+      transition-delay: 500ms;
+      width: 100%;
+      height: auto;
+    }
+
+    .infocardContainer #main,
+    .infocardContainer #main img {
+      --background-color: red;
+      height: 200px;
+      width: 200px;
+      padding-right: 10px;
+      border-radius: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .infocardContainer #main img {
+      height: 180px;
+      width: 180px;
+      transition: none;
+      display: float;
+      position: relative;
+      border: 10px solid white;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    .infocardContainer #textbois {
+      position: relative;
+    }
+
+    .infocardContainer #textbois #hotlinks {
+      max-width: 60%;
+      max-height: 30px;
+
+      --background-color: white;
+      position: absolute;
+      bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 13px;
+    }
+
+    .infocardContainer #textbois #hotlinks * {
+      background-color: white;
+      max-width: 30px;
+      --margin: 0 1px 0 1px;
+      border-radius: 25px;
+    }
+
+    /*TODO: animate copy main transition style for info*/
+    .infocardContainer #textbois #hotlinks *:hover {}
+  </style>
+
+
+  <title>hobbies</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://organindia.org/wp-content/uploads/2015/02/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://organindia.org/wp-content/uploads/2015/02/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/style.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/responsive.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/jquery.bxslider.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/superfish.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+  <!--navbar-->
+
+
+  <!--center body-->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style the header */
+    .header {
+      background-color: #f1f1f1;
+      padding: 5px;
+      text-align: center;
+    }
+
+    /* Create three unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 10px;
+    }
+
+    /* Left and right column */
+    .column.side {
+      width: 20%;
+    }
+
+    /* Middle column */
+    .column.middle {
+      width: 60%;
+    }
+
+    /* Clear floats after the columns */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .column.side,
+      .column.middle {
+        width: 100%;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+
+
+
+<body>
+  <div class="row">
+    <div class="column side">
+      <center>
+    </div>
+    <div class="column middle">
+      <div class="container-fluid slider-images-position">
+
+        <div class="row text-center">
+          <center>
+            <h2 style="color:white;">Hobbies</h2>
+          </center>
+
+
+
+
+
+
+          <div class="infocardContainer">
+            <div id="main">
+              <img src="https://www.cvplaza.com/wp-content/uploads/2012/09/example-of-cv-hobbies.png"></img>
+            </div>
+            <div id="textbois">
+              <h2>Hobbies</h2>
+              <a href="mailto:dishatimbadiya055@gmail.com">dishatimbadiya055@gmail.com</a>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div id="myCarousel1" class="carousel slide" data-ride="carousel" style="padding: 0">
+            <!-- Indicators -->
+            <!-- Wrapper for slides -->
+            <div class="container-fluid">
+              <div class="row text-center">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <!-- <div class="testmonial-image">
+                                        <div class="testmonial-size"> -->
+                    <img src="photo1.jpg" height="330" width="105" style="width: 100%" class="img-responsive" alt="">
+                    <!-- </div>
+                                        </div> -->
+                    <!-- <h3>
+                                        Team India At The WTG 2                                        </h3>
+                                         -->
+                  </div>
+                  <div class="item ">
+                    <img src="photo2.jpg" height="330" width="105" style="width: 100%" class="img-responsive" alt="">
+
+                  </div>
+                  <div class="item ">
+
+                    <img src="photo3.jpg" height="330" width="105" style="width: 100%" class="img-responsive" alt="">
+
+                  </div>
+                  <div class="item ">
+                    <!-- <div class="testmonial-image">
+                                        <div class="testmonial-size"> -->
+                    <img src="photo4.jpg" height="330" width="105" style="width: 100%" class="img-responsive"
+                      alt="whole body donation centers in India">
+                    <!-- </div>
+                                        </div> -->
+                    <!-- <h3>
+                                        Pan india body donation directory                                        </h3>
+                                         -->
+                  </div>
+
+                  <!-- <div class="testmonial-image">
+                                        <div class="testmonial-size"> -->
+
+                </div>
+
+              </div>
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel1" data-slide-to="0" class='active'></li>
+                <li data-target="#myCarousel1" data-slide-to="1"></li>
+                <li data-target="#myCarousel1" data-slide-to="2"></li>
+                <li data-target="#myCarousel1" data-slide-to="3"></li>
+                <li data-target="#myCarousel1" data-slide-to="4"></li>
+              </ol>
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+                <span><img src="https://www.organindia.org/wp-content/themes/organindia/images/left-arrow.svg"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel1" data-slide="next">
+                <span><img src="https://www.organindia.org/wp-content/themes/organindia/images/right-arrow.svg"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <center>
+      <div class="row">
+      <div class="column side">
+
+      </div>
+      <div class="column middle">
+      <div class="row">
+      <div class="column side">
+
+      </div>
+      <div class="column middle">
+
+    <div class="row">
+      <div class="column side">
+
+      </div>
+      <div class="column middle">
+        <section class="hobbies">
+            <h2>Hobbies</h2>
+            <div class="hobby">
+              <div class="post" data-pubdate="2023-04-05">
+                <h3>Articles</h3>
+              </div>
+              <p>Here are some articles I've enjoyed reading recently:</p>
+          <ul>
+            <li><a href="https://talkofthecities.iclei.org/will-the-fight-against-climate-change-surge-in-2023/">
+                <font color="white">Will the fight against climate change SURGe in 2023?
+              </a></li>
+            <li><a
+                href="https://www.theatlantic.com/technology/archive/2023/03/big-tech-deplatforming-free-speech/623128/">
+                <font color="white">The
+                  Limits of Big Tech's Power
+              </a></li>
+            <li><a href="https://www.wired.com/story/how-to-spot-a-deepfake/">
+                <font color="white">How to Spot a Deepfake
+              </a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="column side">
+
+    </div>
+    <div class="column middle">
+      <div class="hobby">
+        <center>
+          <div class="post" data-pubdate="2023-04-05">
+            <h3>Music</h3>
+          </div>
+          <p>Here are some of my favorite songs:</p>
+        </center>
+        <ol>
+          <li>"Bohemian Rhapsody" by Queen</li>
+          <li>"Stairway to Heaven" by Led Zeppelin</li>
+          <li>"Hotel California" by The Eagles</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column side">
+
+    </div>
+    <div class="column middle">
+      <div class="hobby">
+        <center>
+          <div class="post" data-pubdate="2023-04-05">
+            <h3>Paintings</h3>
+          </div>
+          <p>Here are some paintings I find particularly beautiful:</p>
+          <ul>
+        </center>
+        <li><a href="https://www.moma.org/collection/works/34205">
+            <font color="white">The Starry Night
+          </a> by Vincent van Gogh</li>
+        <li><a href="https://www.nga.gov/collection/art-object-page.74001.html">
+            <font color="white">Washington Crossing the Delaware
+          </a> by
+          Emanuel Leutze</li>
+        <li><a href="https://www.metmuseum.org/art/collection/search/437901">
+            <font color="white">The Persistence of Memory
+          </a> by Salvador
+          Dalí</li>
+        </br>
+        </br>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <script>
+    var now = new Date();
+    var oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+    var elements = document.querySelectorAll('.post');
+
+    elements.forEach(function (element) {
+      var pubDate = new Date(element.getAttribute('data-pubdate'));
+
+      if (pubDate > oneWeekAgo) {
+        var newLabel = document.createElement('span');
+        newLabel.classList.add('new');
+        newLabel.innerText = 'New';
+        element.insertBefore(newLabel, element.firstChild);
+      }
+    });
+
+  </script>
+  </div>
+  </div>
+  </div>
+  </div>
+  </center>
+        </center>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<html>
+
+<head>
+   <style>
+
+   <meta charset="utf-8">
+  <link rel="shortcut icon" href="https://organindia.org/wp-content/uploads/2015/02/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://organindia.org/wp-content/uploads/2015/02/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Organ Donation India | Organ Receiving &amp; Giving Awareness Network India </title>
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/style.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/responsive.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/jquery.bxslider.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/css/superfish.css" rel="stylesheet">
+  <link href="https://www.organindia.org/wp-content/themes/organindia/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+     
+* {
+  box-sizing: border-box;
+}
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+   <style>
+    .new {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color:greenyellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+  </style>
+  <style>
+    html body {
+      background-color: black;
+      margin: 0 0 0 0;
+    }
+
+    .infocardContainer * {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      font-weight: 300;
+    }
+    .hobbies
+    {
+      align-content: center;
+      font-family: 'Fira Sans Condensed', sans-serif;
+      color: white;
+    }
+    .hobby
+    {
+      font-family: 'Fira Sans Condensed', sans-serif;
+      color: white;
+    }
+    h2 {
+      font-weight: 600;
+      font-style: italic;
+      font-family: "Fira Sans Condensed", sans-serif;
+    }
+
+    header {
+      height: 2em;
+      background-color: #111122;
+      margin: 0 0 0 0;
+      padding: auto;
+      font-size: 2em;
+      text-align: center;
+      line-height: 2em;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #555566;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .infocardContainer {
+      display: flex;
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+      background: rgb(0, 159, 255);
+      background: linear-gradient(121deg, rgba(255, 255, 255, 0) 13%, rgba(0, 159, 255, 1) 100%);
+      transition: all 500ms ease-in;
+      transition-delay: 1s;
+      margin: auto;
+      margin-top: 100px;
+      --margin-top: 100px;
+    }
+
+    .infocardContainer:hover {
+      width: 500px;
+      border-radius: 100px 10px 100px 100px;
+      transition: all 1s ease-out;
+    }
+
+    .infocardContainer div {
+      text-color: white;
+      flex-shrink: 1;
+      width: 100%;
+      --background-color: green;
+    }
+
+    .infocardContainer div * {
+      display: flex;
+      --flex: inherit;
+      overflow: hidden;
+      text-overflow: hidden;
+      --background-color: yellow;
+      color: white;
+      white-space: nowrap;
+      width: 0;
+      height: auto;
+      transition: all 450ms ease-in;
+      transition-delay: 1s;
+    }
+
+    .infocardContainer:hover div * {
+      --background-color: purple;
+      display: flex;
+      visibility: visible;
+      transition: all 1s ease-out;
+      transition-delay: 500ms;
+      width: 100%;
+      height: auto;
+    }
+
+    .infocardContainer #main,
+    .infocardContainer #main img {
+      --background-color: red;
+      height: 200px;
+      width: 200px;
+      padding-right: 10px;
+      border-radius: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .infocardContainer #main img {
+      height: 180px;
+      width: 180px;
+      transition: none;
+      display: float;
+      position: relative;
+      border: 10px solid white;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    .infocardContainer #textbois {
+      position: relative;
+    }
+
+    .infocardContainer #textbois #hotlinks {
+      max-width: 60%;
+      max-height: 30px;
+
+      --background-color: white;
+      position: absolute;
+      bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 13px;
+    }
+
+    .infocardContainer #textbois #hotlinks * {
+      background-color: white;
+      max-width: 30px;
+      --margin: 0 1px 0 1px;
+      border-radius: 25px;
+    }
+
+    /*TODO: animate copy main transition style for info*/
+    .infocardContainer #textbois #hotlinks *:hover {}
+  </style>
+</head>
+
+<body>
+
+  
+
+     <div class="row">
+  <div class="column side">
+    
+  </div>
+ <div class="column middle">
+
+
+   
+  <div class="infocardContainer">
+    <div id="main">
+      <img src="https://www.cvplaza.com/wp-content/uploads/2012/09/example-of-cv-hobbies.png"></img>
+    </div>
+    <div id="textbois">
+      <h2>Hobbies</h2>
+      <a href="mailto:dishatimbadiya055@gmail.com">dishatimbadiya055@gmail.com</a>
+    </div>
+  </div>
+  <section class="hobbies">
+    <center><h2>Hobbies</h2>
+  <div class="hobby">
+    <div class="post" data-pubdate="2023-04-05">
+      <h3>Articles</h3>
+  </div>
+      <p>Here are some articles I've enjoyed reading recently:</p>
+      
+      </center>
+      <ul>
+        <li><a href="https://talkofthecities.iclei.org/will-the-fight-against-climate-change-surge-in-2023/"> <font color="white">Will the fight against climate change SURGe in 2023?</a></li>
+        <li><a
+            href="https://www.theatlantic.com/technology/archive/2023/03/big-tech-deplatforming-free-speech/623128/"><font color="white">The
+            Limits of Big Tech's Power</a></li>
+        <li><a href="https://www.wired.com/story/how-to-spot-a-deepfake/"><font color="white">How to Spot a Deepfake</a></li>
+      </ul>
+    </div>
+      </div>
+  </div>
+   </div>
+
+
+   <div class="row">
+  <div class="column side">
+    
+  </div>
+ <div class="column middle">
+    <div class="hobby">
+         <center>
+      <div class="post" data-pubdate="2023-04-05">
+      <h3>Music</h3>
+      </div>
+      <p>Here are some of my favorite songs:</p>
+        </center>
+      <ol>
+        <li>"Bohemian Rhapsody" by Queen</li>
+        <li>"Stairway to Heaven" by Led Zeppelin</li>
+        <li>"Hotel California" by The Eagles</li>
+      </ol>
+    </div>
+ </div>
+   </div>
+  
+    <div class="row">
+  <div class="column side">
+    
+  </div>
+ <div class="column middle">
+    <div class="hobby">
+      <center>
+        <div class="post" data-pubdate="2023-04-05">
+      <h3>Paintings</h3></div>
+      <p>Here are some paintings I find particularly beautiful:</p>
+      <ul>
+        </center>
+        <li><a href="https://www.moma.org/collection/works/34205"><font color="white">The Starry Night</a> by Vincent van Gogh</li>
+        <li><a href="https://www.nga.gov/collection/art-object-page.74001.html"><font color="white">Washington Crossing the Delaware</a> by
+          Emanuel Leutze</li>
+        <li><a href="https://www.metmuseum.org/art/collection/search/437901"><font color="white">The Persistence of Memory</a> by Salvador
+          Dalí</li>
+    </br>
+    </br>
+      
+      </ul>
+    </div>
+   </div>
+   </div>
+  
+  </section>
+
+     <script>
+var now = new Date();
+var oneWeekAgo = new Date();
+oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+var elements = document.querySelectorAll('.post');
+
+elements.forEach(function(element) {
+  var pubDate = new Date(element.getAttribute('data-pubdate'));
+
+  if (pubDate > oneWeekAgo) {
+    var newLabel = document.createElement('span');
+    newLabel.classList.add('new');
+    newLabel.innerText = 'New';
+    element.insertBefore(newLabel, element.firstChild);
+  }
+});
+
+  </script>
+   </div>
+   </div>
+</div>
+
+
+
+
+
+  
+</body>
+
+</html> -->
