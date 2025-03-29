@@ -1,639 +1,623 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Disha Timbadiya</title>
-
-  <!--top button-->
-  <style>
-  #topBtn {
-  /* display:; /* Hide the button by default */
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Place the button 20px from the bottom */
-  right: 20px; /* Place the button 20px from the right */
-  z-index: 99; /* Make sure the button is on top of other elements */
-  border: none; /* Remove border */
-  outline: none; /* Remove outline */
-  background-color: transparent; /* Set background color to transparent */
-  cursor: pointer; /* Change cursor to a hand pointer */
-}
-
-#topBtn img {
-  height: 40px;
-  weight: 40px;
-  border-radius: 50%; 
-}
-</style>
-
-
-  
-<!--center body-->
-  <style>
-* {
-  box-sizing: border-box;
-}
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
-
-/* Left and right column */
-.column.side {
-  width: 20%;
-}
-
-/* Middle column */
-.column.middle {
-  width: 60%;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-}
-</style>
-
-
-
-  
-<!--FOOTER  -->
-<style>
-footer {
-  text-align: center;
-  height:70px;
-  padding: 10px;
-  background-color:black;
-  color: white;
-}
-  </style>
-
-  
- 
-
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Times New Roman', Times, serif;
-
-      /*background: linear-gradient(#03a9f4, #03a9f4 45%, #fff 45%, #fff 100%);*/
-    }
-
-    .card {
-      position: relative;
-      width: 300px;
-      height: 400px;
-      background: #fff;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(15px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .img-bx {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      transform: translateY(30px) scale(0.5);
-      transform-origin: top;
-    }
-
-    .img-bx img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .content {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      padding-bottom: 30px;
-    }
-
-    .content .detail {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .content .detail h2 {
-      color: #444;
-      font-size: 1.6em;
-      font-weight: bolder;
-    }
-
-    .content .detail h2 span {
-      font-size: 0.7em;
-      color: #03a9f4;
-      font-weight: bold;
-    }
-
-    .sci {
-      background:white;
-      position: relative;
-      display: flex;
-      margin-top: 5px;
-    }
-
-    .sci li {
-      background:white;
-      list-style: none;
-      margin: 4px;
-    }
-
-    .sci li a {
-      width: 45px;
-      height: 45px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background: transparent;
-      font-size: 1.5em;
-      color: #444;
-      text-decoration: none;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      transition: 0.5s;
-    }
-
-    .sci li a:hover {
-      background: lightpink;
-      color: #fff;
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-
-
-
-
-  <style>
-    ._darkModeContainer_4lpgk_2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 3px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .MuiSvgIcon-root {
-      fill: currentColor;
-      width: 1em;
-      height: 1em;
-      display: inline-block;
-      font-size: 1.5rem;
-      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-      flex-shrink: 0;
-      user-select: none;
-    }
-  </style>
-
-
-
-
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disha Timbadiya - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-
-
-  <style>
-    button {
-      background-color: black;
-      color: white;
-      width: 170px;
-      hight: 40px;
-      border-radius: 10px;
-      border: 5px lightgray;
-
-    }
-  </style>
-
-
-  <style>
-    ._darkModeContainer_4lpgk_2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .MuiSvgIcon-root {
-      fill: currentColor;
-      width: 1em;
-      height: 1em;
-      display: inline-block;
-      font-size: 1.5rem;
-      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-      flex-shrink: 0;
-      user-select: none;
-    }
-  </style>
-
-
-
-
-  <style>
-    .switch {
-      --primary-light: #8abdff;
-      --primary: #6d5dfc;
-      --primary-dark: #5b0eeb;
-      --white: #FFFFFF;
-      --greyLight-1: #E4EBF5;
-      --greyLight-2: #c8d0e7;
-      --greyDark: #9baacf;
-    }
-
-    .switch input {
-      display: none;
-    }
-
-    .switch_ {
-      width: 5rem;
-      scale: 0.83;
-      /* You can change 
-  the size here !*/
-    }
-
-    .switch_ label {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 3rem;
-      box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
-      background: rgba(255, 255, 255, 0);
-      position: relative;
-      cursor: pointer;
-      border-radius: 1.6rem;
-    }
-
-    .switch_ label::after {
-      content: "";
-      position: absolute;
-      left: 0.4rem;
-      width: 2.1rem;
-      height: 2.1rem;
-      border-radius: 50%;
-      background: var(--greyDark);
-      transition: all 0.4s ease;
-    }
-
-    .switch_ label::before {
-      content: '';
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
-      opacity: 0;
-      transition: all 0.4s ease;
-    }
-
-    .switch input:checked~label::before {
-      opacity: 1;
-    }
-
-    .switch input:checked~label::after {
-      left: 57%;
-      background: var(--greyLight-1);
-    }
-
-    .dark {
-      background-color: black;
-      color: white;
-    }
-  </style>
-
-
-
-  <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      background-color: darkgrey;
-    }
-  </style>
-  <style>
-    #customers {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    #customers td,
-    #customers th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-
-    #customers tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    #customers tr:hover {
-      background-color: #ddd;
-    }
-
-    #customers th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: black;
-      color: white;
-    }
-  </style>
-
-
-
-
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Disha Timbadiya</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="ach.html">Achievements</a></li>
-    <li><a href="contact_me.html">Contact</a></li>
-    <li><a href="profile.html">About</a></li>
-    <li><a href="hobbies.html">Hobbies </a></li>
-    <li><a href="startupideas.html">Startup Ideas </a></li>
-     <li><a href="projects.html">Projects </a></li>
-    <li><a href="https://puzzle.dishatimbadiya.repl.co/">Puzzle </a></li>
-     <li><a href="feedback.html">Feedback </a></li>
-    <li>
-      <div class="_title__elements_1dtux_1084">
-        <div>
-          <div class="_darkModeContainer_4lpgk_2" onclick="myFunction()" title="Switch to Dark Mode"
-            style="margin-left: 0px;">
-            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(clip0_429_11039)"> <circle cx="12" cy="12" r="4" stroke="" stroke-width="2.5" stroke-linejoin="round"></circle> <path d="M20 12H21" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M3 12H4" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M12 20L12 21" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M12 3L12 4" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M17.6569 17.6569L18.364 18.364" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M5.63605 5.63604L6.34315 6.34315" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M6.34314 17.6569L5.63603 18.364" stroke="" stroke-width="2.5" stroke-linecap="round"></path> <path d="M18.364 5.63604L17.6568 6.34315" stroke="" stroke-width="2.5" stroke-linecap="round"></path> </g> <defs> <clipPath id="clip0_429_11039"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>
-
-
- </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Disha Timbadiya</h1>
+        <h2>Software Engineer</h2>
+        <p>Passionate about creating innovative solutions and building scalable applications. Combining technical
+          expertise with problem-solving skills to develop efficient software solutions.</p>
+        <div class="social-links">
+          <a href="https://github.com/Dishatimbadiya" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dishatimbadiya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:dishatimbadiya055@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-    </li>
+      <div class="hero-image">
+        <img src="profile.jpg" alt="Disha Timbadiya" class="profile-photo">
+      </div>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am a B.Tech student in Computer Engineering at Dharmsinh Desai University with a strong academic record
+            (CPI: 8.41/10). I have a passion for software development and competitive programming, with notable
+            achievements in various coding platforms.</p>
+          <p>My journey in technology began with a curiosity about how things work, which evolved into a passion for
+            building solutions that can make a difference. I enjoy tackling complex problems and transforming ideas into
+            reality through code.</p>
 
-    <script>
-      function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark");
-      }
-    </script>
-    </li>
-  </ul>
-  </head>
-
-  <body>
-    
-    <center>
-      <br>
-<div class="row">
-  <div class="column side">
-    
-  </div>
- <div class="column middle">
-<button class="topBtn"id="topBtn"><img src="top.jpg" alt="Back to Top"></button>
-      <h2> PROFILE </h2>
-      <br>
-
-      <div class="card">
-        <div class="img-bx">
-          <img src="profile1.jpg" alt="img" />
-        </div>
-        <div class="content">
-          <div class="detail">
-            <h2>Disha Timbadiya<br /><span>Student</span></h2>
-            <ul class="sci">
-              <li>
-                <a href="mailto:dishatimbadiya055@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/Dishatimbadiya"><i class="fab fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/disha-t-950553248/"><i class="fab fa-linkedin-in"></i></a>
-              </li>
+          <div class="coding-profiles">
+            <h3>Coding Profiles</h3>
+            <ul>
+              <li><i class="fas fa-code"></i> LeetCode: 1683 max, Top 15%</li>
+              <li><i class="fas fa-code"></i> GeeksForGeeks: Top 1%</li>
+              <li><i class="fas fa-code"></i> Codeforces: 1008 max</li>
             </ul>
           </div>
         </div>
-      </div>
-      </centre>
-      </br>
-
-      </br>
-      <P>Hi! I'm a First year undergraduate student at the <a href="https://www.ddu.ac.in/"><b>DHARMSINH DESAI
-            UNIVERSITY</b></a> Nadiad.
-        I am pursuing BTech in Computer Engineering.
-      </P>
-      </br>
-
-
-        <h2>EDUCATION</h2>
-  
-      <br>
-      <br>
-
-      <table id="customers">
-        <tr>
-          <th>Qualification</th>
-          <th>Year of complition </th>
-          <th>Institute</th>
-        </tr>
-        <tr>
-          <td>SSC</td>
-          <td>2020</td>
-          <td>Patel sankul</td>
-        </tr>
-        <tr>
-          <td>HSC</td>
-          <td>2022</td>
-          <td>Vidhyaguru science school</td>
-        </tr>
-        <tr>
-          <td>Graduaction(pursuing)</td>
-          <td>2026</td>
-          <td>DDU</td>
-        </tr>
-      </table>
-      </br>
-      </br>
-
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        input[type=text],
-        select,
-        textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-          margin-top: 6px;
-          margin-bottom: 16px;
-          resize: vertical;
-        }
-
-        input[type=submit] {
-          background-color: #04AA6D;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-          background-color: #45a049;
-        }
-
-        .container {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
-        }
-      </style>
-      </head>
-
-      <body>
-  
-          <h2>GET DIRECTION OF MY COLLEGE</h2>
-      
-        <br>
-        <br>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.290219261327!2d72.87801001488418!3d22.680237685127544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5adf2c171355%3A0xe1e974ce083657fb!2sDHARMSINH%20DESAI%20UNIVERSITY!5e0!3m2!1sen!2sin!4v1679897948182!5m2!1sen!2sin"
-          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <br>
-        <br>
-          <h2>CONTACT ME</h2>
-        <br>
-        <br>
-
-
-
-      <!-- java script for top button-->
-
-
-        
-        <script>
-        // Get the button
-var topBtn = document.getElementById("topBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-topBtn.onclick = function() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
-</script>
-
-
-
-        
-        <div class="container">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="india">India</option>
-              <option value="china">China</option>
-              <option value="rasia">Rasia</option>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-
-
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-
-            <input type="submit" value="Submit">
-          </form>
+        <div class="education">
+          <h3>Education</h3>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+              <h4>B.Tech. in Computer Engineering</h4>
+              <p class="institution">Dharmsinh Desai University - Nadiad</p>
+              <p class="details">CPI: 8.41/10 | 2022 — 2026</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="education-details">
+              <h4>HSC, Science</h4>
+              <p class="institution">Krishna Science School - Amreli</p>
+              <p class="details">PR: 99.36 | 2020 — 2022</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="education-details">
+              <h4>SSC</h4>
+              <p class="institution">Patel Sankul - Amreli</p>
+              <p class="details">PR: 99.34 | 2019 — 2020</p>
+            </div>
+          </div>
         </div>
- </div>
-</div>
-<!--         <h3>Email : dishatimbadiya055@gmail.com</h3> -->
-<footer>
-  <a href="mailto:dishatimbadiya055@gmail.com" style="color:white;">Email : dishatimbadiya055@gmail.com</a>
-  <p>© 2022 All rights reserved.</p>
-</footer>
-      </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements">
+    <div class="container">
+      <h2>Achievements & Awards</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Amazon Future Engineer</h3>
+          <p>Selected among 500 scholars from a pool of 8000+ applicants for this prestigious scholarship program.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>Competitive Programming</h3>
+          <p>Global Rank 46, 281, 317 in GFG Contests (Top 1% of participants worldwide).</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>LeetCode Achievement</h3>
+          <p>Global Rank 2137 in LeetCode BiWeekly Contest 141 (Top 15% of participants).</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>BNY Mellon Code Divas'23</h3>
+          <p>Finalist in this prestigious coding competition for women in technology.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Academic Excellence</h3>
+          <p>Recipient of 3 Silver Medals for Outstanding Academic Performance in consecutive years.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Hackathon</h3>
+          <p>Certified by duhacks 2.0, a national-level hybrid hackathon with over 500 participants.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>FLY-Scholar Program</h3>
+          <p>Successfully completed the FLY-Scholar program by The Competitiveness Mindset Institute, USA, developing
+            key non-cognitive skills.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Bhashathon Achievement</h3>
+          <p>Team Global Optimia secured Top 6 position in Bhashathon by IIT Bombay, winning ₹5K prize for IV ASR Output
+            Correction system.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Mentorship Programs</h3>
+          <p>Selected as a mentee in prestigious programs: Navgurukul, Codess Cafe, and FLY-Scholar program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Software Engineering Intern</h3>
+            <h4>Amazon</h4>
+            <p class="date">May 2024 — June 2024 | Bangalore</p>
+          </div>
+          <a href="https://drive.google.com/file/d/17YbiNNkiGzMFoGdTuUInTf61gAqAXYIG/view?usp=sharing" target="_blank"
+            class="certificate-link">
+            <i class="fas fa-certificate"></i> View Certificate
+          </a>
+        </div>
+        <ul>
+          <li>Resolved over 50 SIM tickets related to production data pipeline issues, improving system reliability</li>
+          <li>Executed comprehensive data quality checks across 40 datasets and successfully onboarded 16 new datasets
+          </li>
+          <li>Created a detailed data dictionary for 15+ datasets, improving team productivity by 30%</li>
+          <li>Achieved annual cost savings of $2400 through optimization of data processing workflows</li>
+          <li>Tech Stack: AWS (Glue, Lambda, STEP function, Athena, Cloudwatch, Data Pipeline, CloudTrail, Quick Sight),
+            Python, SQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Climate-Smart Agriculture Platform">
+          </div>
+          <div class="project-content">
+            <h3>Climate-Smart Agriculture Platform</h3>
+            <p>A comprehensive platform empowering farmers with real-time weather updates, crop predictions based on
+              soil conditions, and climate data analytics to optimize agricultural productivity.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>TensorFlow</span>
+              <span>Weather API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/Climate-Smart-Agriculture-Platform" target="_blank"
+                class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="https://www.linkedin.com/posts/dishatimbadiya_technologyforgood-agritech-machinelearning-activity-7270494646311485440-6Wvv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1OKowBAK3ehlDUWBUDSIvRWqOPQucei7I"
+                target="_blank" class="demo-link">
+                <i class="fas fa-external-link-alt"></i>Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Load Balancer Visualization">
+          </div>
+          <div class="project-content">
+            <h3>Load Balancer Visualization</h3>
+            <p>An interactive visualization of load balancing algorithms to aid in understanding system design concepts.
+              Features real-time simulation of Round Robin, Weighted Round Robin, and Least Connections algorithms.</p>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring MVC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/LoadBalancerVisulization" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Gesture Talk -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1610986603166-f78428624e76?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Gesture Talk">
+          </div>
+          <div class="project-content">
+            <h3>Gesture Talk - Sign Language Recognition</h3>
+            <p>Real-time sign language recognition platform that converts hand gestures (A-Z, 0-9, and common words)
+              into text, bridging communication gaps for the hearing impaired.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>TensorFlow/Keras</span>
+              <span>MediaPipe</span>
+              <span>OpenCV</span>
+              <span>Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/GestureTalk" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Real-time gesture recognition</li>
+                <li>Supports A-Z, 0-9 and common words</li>
+                <li>Hand tracking and pose estimation</li>
+                <li>Accessibility-focused design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- LinkedIn Filtered -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="LinkedIn Filtered">
+          </div>
+          <div class="project-content">
+            <h3>LinkedIn Filtered - Connection Manager</h3>
+            <p>Edge extension that helps manage LinkedIn connection requests by filtering based on keywords, saving time
+              and improving networking efficiency.</p>
+            <div class="tech-stack">
+              <span>JavaScript</span>
+              <span>Edge Extension API</span>
+              <span>HTML/CSS</span>
+              <span>DOM Manipulation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lnkd.in/gUpfg25g" target="_blank" class="github-link">
+                <i class="fab fa-edge"></i> Edge Store
+              </a>
+            </div>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Keyword-based filtering</li>
+                <li>Customizable keyword lists</li>
+                <li>One-click installation</li>
+                <li>Lightweight and fast</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Global Optimia">
+          </div>
+          <div class="project-content">
+            <h3>Global Optimia - Bhashathon</h3>
+            <p>Team Global Optimia secured Top 6 position in Bhashathon by IIT Bombay, winning ₹5K prize. Developed an
+              IV ASR Output Correction system supporting English, Hindi, and Malayalam with high accuracy rates.</p>
+            <div class="tech-stack">
+              <span>OpenAI Whisper</span>
+              <span>Facebook S2T</span>
+              <span>T5</span>
+              <span>mBART-50</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/ASR-Output-Correction" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Student Placement Management System">
+          </div>
+          <div class="project-content">
+            <h3>Student Placement Management System</h3>
+            <p>A comprehensive DBMS project to manage student placements, company interactions, and recruitment
+              processes. Features include student profiles, company registration, interview scheduling, and placement
+              statistics.</p>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/Student_Placement_Management_System" target="_blank"
+                class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="spm.great-site.net/index.php" target="_blank" class="demo-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Algorithm Repository API">
+          </div>
+          <div class="project-content">
+            <h3>Algorithm Repository API</h3>
+            <p>RESTful API for storing, retrieving, and managing algorithms with CRUD operations, category-based
+              filtering, bookmarking, searching, and versioning capabilities.</p>
+            <div class="tech-stack">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring MVC</span>
+              <span>Postman</span>
+              <span>REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/Algo_Repo" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SmartShop -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="SmartShop">
+          </div>
+          <div class="project-content">
+            <h3>SmartShop E-Commerce Platform</h3>
+            <p>E-commerce platform with product listings, user authentication, search functionality, cart system,
+              checkout process, and order tracking.</p>
+            <div class="tech-stack">
+              <span>Django</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/Ecommerce_website" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Organ Donation Website -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Organ Donation Website">
+          </div>
+          <div class="project-content">
+            <h3>Organ Donation Awareness Website</h3>
+            <p>An informative website to raise awareness about organ donation. Includes donor registration, facts about
+              organ donation, success stories, and a FAQ section to address common concerns.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/Organ_Donation" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="http://organdonation.great-site.net/" target="_blank" class="demo-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- School Website -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="School Website">
+          </div>
+          <div class="project-content">
+            <h3>School Website</h3>
+            <p>A responsive website created for my school featuring information about programs, faculty, events, and
+              achievements. Built with pure HTML and CSS for optimal performance.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Responsive Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.linkedin.com/posts/dishatimbadiya_school-html-css-activity-7046322206175313920-2xfk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1OKowBAK3ehlDUWBUDSIvRWqOPQucei7I"
+                target="_blank" class="demo-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tic Tac Toe Game -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1558346547-4439467bd1d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Tic Tac Toe Game">
+          </div>
+          <div class="project-content">
+            <h3>Tic Tac Toe Game</h3>
+            <p>A console-based Tic Tac Toe game implemented in C++ with features like player vs computer mode, score
+              tracking, and an interactive game board. Demonstrates OOP concepts and game logic.</p>
+            <div class="tech-stack">
+              <span>C++</span>
+              <span>OOP</span>
+              <span>Game Development</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Dishatimbadiya/tic_tac_toe_game_in_cpp" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> View Code
+              </a>
+              <a href="https://www.linkedin.com/posts/dishatimbadiya_linkedin-programming-project-activity-7045431463357362176-nHbX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1OKowBAK3ehlDUWBUDSIvRWqOPQucei7I"
+                target="_blank" class="demo-link">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Computer Science</h3>
+          <ul>
+            <li>Competitive Programming</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Object-Oriented Programming</li>
+            <li>Software Engineering</li>
+            <li>Database Management</li>
+            <li>System Design</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>C++ </li>
+            <li>C </li>
+            <li>Python </li>
+            <li>Java </li>
+            <li>JavaScript </li>
+            <li>PHP </li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Libraries</h3>
+          <ul>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Spring Boot</li>
+            <li>Django</li>
+            <li>Express.js</li>
+            <li>Bootstrap</li>
+            <li>jQuery</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>AWS (S3, Athena, Glue)</li>
+            <li>Postman</li>
+            <li>MySQL/Oracle</li>
+            <li>MongoDB</li>
+            <li>Docker</li>
+            <li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>dishatimbadiya055@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Disha Timbadiya. All rights reserved.</p>
+      <div class="social-links" style="justify-content: center; margin-top: 20px;">
+        <a href="https://github.com/Dishatimbadiya" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dishatimbadiya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:dishatimbadiya055@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://x.com/DishaTimbadiya" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
